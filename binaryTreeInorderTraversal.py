@@ -11,23 +11,25 @@ class TreeNode:
 
 
 
+
+
 class Solution:
     def inorderTraversalRec(self, res: List[int], root: Optional[TreeNode]) -> List[int]:
         if root is not None:
             if root.left != None:
                 res = self.inorderTraversalRec(res, root.left)
-                res.append(root.left.val)
+                
+            res.append(root.val)
             
             if root.right != None:
                 res = self.inorderTraversalRec(res, root.right)
-                res.append(root.right.val)
+            
                 
         return res
         
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res = []
         if root != None:
-            res.append(root.val)
             res = self.inorderTraversalRec(res, root)
         return res
 
