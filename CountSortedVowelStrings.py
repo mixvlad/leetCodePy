@@ -18,11 +18,4 @@ class Solution:
             
         return recursive(n, 5)
         
-    def test(self):
-        assert self.countVowelStrings(1) == 5
-        assert self.countVowelStrings(2) == 15
-        assert self.countVowelStrings(33) == 66045
-
-if __name__ == "__main__":
-    Solution().test()
-    print("Everything passed")
+     
